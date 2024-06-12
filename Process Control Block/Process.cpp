@@ -1,51 +1,29 @@
+#include "Process.h"
 #include<bits/stdc++.h>
 using namespace std;
 
-class Process{
-  private:
-    int process_id;
-    int arrival_time;
-    int burst_time;
-    int priority = 0;
-    int start_time = 0;
-    int finish_time = 0;
-    int remaining_time;
-    int wait_time = 0;
-    int turn_around_time = 0;
-  public:
-    Process(int process_id,int arrival_time,int burst_time){
-      this -> process_id = process_id;
-      this -> arrival_time = arrival_time;
-      this -> burst_time = burst_time;
-      this -> remaining_time = burst_time;
-    }
-    Process(int process_id,int arrival_time,int burst_time,int priority){
-      this -> process_id = process_id;
-      this -> arrival_time = arrival_time;
-      this -> burst_time = burst_time;
-      this -> remaining_time = burst_time;
-      this -> priority = priority;
-    }
-    int getID() {return this->process_id;}
-    int getAT() {return this->arrival_time;}
-    int getBT() {return this->burst_time;}
-    int getPriority() {return this->priority;}
-    int getST() {return this->start_time;}
-    int getFT() {return this->finish_time;}
-    int getRT() {return this->remaining_time;}
-    int getWT() {return this->wait_time;}
-    int getTAT() {return this->turn_around_time;}
-
-    void setST(int time) {this->start_time = time;}
-    void setFT(int time) {this->finish_time = time;}
-    void setRT(int time) {this->remaining_time = time;}
-    void setWT(int time) {this->wait_time = time;}
-    void setTAT(int time) {this->turn_around_time = time;}
-
-
-};
-
 vector<Process> processes;
+
+Process::Process(int process_id,int arrival_time,int burst_time) : process_id(process_id), arrival_time(arrival_time), burst_time(burst_time), remaining_time(burst_time), priority(0), start_time(0), finish_time(0), wait_time(0), turn_around_time(0) {}
+Process::Process(int process_id,int arrival_time,int burst_time,int priority) : process_id(process_id), arrival_time(arrival_time), burst_time(burst_time), remaining_time(burst_time), priority(priority), start_time(0), finish_time(0), wait_time(0), turn_around_time(0) {}
+  
+int Process::getID() {return process_id;}
+int Process::getAT() {return arrival_time;}
+int Process::getBT() {return burst_time;}
+int Process::getPriority() {return priority;}
+int Process::getST() {return start_time;}
+int Process::getFT() {return finish_time;}
+int Process::getRT() {return remaining_time;}
+int Process::getWT() {return wait_time;}
+int Process::getTAT() {return turn_around_time;}
+
+
+void Process::setST(int time) {start_time = time;}
+void Process::setFT(int time) {finish_time = time;}
+void Process::setRT(int time) {remaining_time = time;}
+void Process::setWT(int time) {wait_time = time;}
+void Process::setTAT(int time) {turn_around_time = time;}
+
 
 void print_all_processes(){
   for(auto process:processes){
