@@ -133,5 +133,21 @@ I hope with these flowcharts and diagrams you are able to understand a little bi
 - **C++**: Used as the back-end Language
 - **Electron.js**: Used as front-end Framework
 - **D3.js**: Used to make Gantt-Chart Bars
+- To run this First you need Node Package Manager(npm) and Node.js.
+- Then in terminal run command npm install electron –save-dev.
+- In terminal run go to your CPU-Scheduler directory and run command npm start.
+- Your Desktop Application will open.
+- **Condition**: whenever your are giving input of your process details make sure you give in this bold text format 1,2,3,4 ; 5,6,7,8. What does this mean?
+- – 1 - Process[1] identity
+- – 2 - Process[1] Arrival Time
+- – 3 - Process[1] Burst Time
+- – 4 - Process[1] Priority
+- – 5 - Process[2] identity
+- – 6 - Process[2] Arrival Time
+- – 7 - Process[2] Burst Time
+- – 8 - Process[2] Priority
+- Make sure your add ’;’ between any two process.
+
+
 
 **Condition**: All input process details must be given in positive numbers only.
