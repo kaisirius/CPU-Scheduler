@@ -43,7 +43,7 @@ This was how I went through the journey of making this project. To understand it
 ![Shortest Job First Algorithm](images/SJF.png)  
 **Figure 4: Shortest Job First Algorithm**
 
-![General Multilevel Queue Algorithm](images/General_MLQ.png)  
+![General Multilevel Queue Algorithm](images/General MLQ.png)  
 **Figure 5: General Multilevel Queue Algorithm**
 
 I hope with these flowcharts and diagrams you are able to understand a little bit about what actually happens in the respective algorithms. There are more existing algorithms which are discussed in the last portion of the report but first, let's go into the implementation of the code base from the next section.
